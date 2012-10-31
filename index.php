@@ -36,6 +36,7 @@
   <div class="crank_welcome" id="crank_welcome"></div>
   <div class="crank_txtChooseCountry" id="crank_txtChooseCountry"></div>
   <div class="crank_number" id="crank_number"></div>
+  <div class="crank_txtCranked" id="crank_txtCranked"></div>
   <div class="crank_welcome_line" id="crank_welcome_line"></div>
   <!--welcome text-->
   
@@ -179,6 +180,8 @@
        }else if(password == passwordMatch){
 		   
 		    Crank.CoverBox({title:"Welcome To Crank",text:"You Are Officially Cranked"});
+			$("#crank_number").hide();
+			$("#crank_txtCranked").fadeIn();
 		   
 		   }else{
 			   

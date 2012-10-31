@@ -101,6 +101,14 @@ input:focus{
 	margin:0 auto;
 }
 
+.crank_txtCranked{
+	display:none;
+	background:url(../Assets/txtCranked.png) no-repeat;
+	width:660px;
+	height:72px;
+	margin:0 auto;
+}
+
 .crank_button_domain{
 	width:732px;
 	height:400px;

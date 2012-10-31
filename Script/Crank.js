@@ -197,9 +197,7 @@
 			  manualLocation();}
  // if(Crank.COUNTRY == "UK"){$("#crank_txtFieldSet_title_sub").text("+44")}else{manualLocation();}
  
-
-
-    },
+},
     error: function(e) {
 		
        console.log("error");
