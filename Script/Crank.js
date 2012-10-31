@@ -164,6 +164,7 @@
       longitude = startPos.coords.longitude;
 	//  url = "http://maps.googleapis.com/maps/api/geocode/json?latlng="+latitude+","+longitude+"&sensor=false";
 	url  = "https://api.foursquare.com/v2/venues/search?ll="+latitude+","+longitude+"&oauth_token=3IYMA1D0J2OFDMORTCOIEWZMLUGW2HCRTMGWSXDQN5RQBGR2&v=20120407";
+	//url  = "https://api.foursquare.com/v2/venues/search?ll=9.552,-7.764587&oauth_token=3IYMA1D0J2OFDMORTCOIEWZMLUGW2HCRTMGWSXDQN5RQBGR2&v=20120407";
 
 	$.ajax({
     type: "GET",
@@ -173,6 +174,8 @@
 	jsonpCallback: 'jsonCallback',
  contentType: "application/json",
     success: function(json) {
+		
+		if(json.response.venues[0] != undefined){
 
  Crank.COUNTRY = String(json.response.venues[0].location.country).toUpperCase();
  
@@ -185,16 +188,30 @@
 	  
 	  } else if(Crank.COUNTRY == "NIGERIA"){
 		  
-		  $("#crank_txtFieldSet_title_sub").text("+2")
+		  $("#crank_txtFieldSet_title_sub").text("+2");
+		  console.log(Crank.COUNTRY);
+	  geocodingSettings();
+	  $("#crank_txtFieldSet_text").text(Crank.COUNTRY);
 		  
 		  }else if(Crank.COUNTRY == "UK"){
 			  
-			  $("#crank_txtFieldSet_title_sub").text("+44")
+			  $("#crank_txtFieldSet_title_sub").text("+44");
+			  console.log(Crank.COUNTRY);
+	  geocodingSettings();
+	  $("#crank_txtFieldSet_text").text(Crank.COUNTRY);
+	  
+		  }else{
+			  
+			  manualLocation();
+			  
+			  }
 			  
 			  
 			  }else{
 			  
-			  manualLocation();}
+			  manualLocation();
+			  
+			  }
  // if(Crank.COUNTRY == "UK"){$("#crank_txtFieldSet_title_sub").text("+44")}else{manualLocation();}
  
 },
