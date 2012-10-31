@@ -1,4 +1,11 @@
 
+body{
+	overflow:hidden;
+	}
+	
+input:focus{
+	outline:none;
+}
 
 .MasterLayer{
     position:relative;
@@ -26,14 +33,40 @@
 	width:276px;
 	height:256px;
 	margin:0 auto;
-	margin-top:-260px;
+	float:left;
+	margin-left:350px;
 }
+
+.crank_logo_small{
+	display:none;
+	background:url(../Assets/logo_small.png) no-repeat;
+	width:154px;
+	height:136px;
+	margin:0 auto;
+	float:left;
+}
+
+.crank_logo_container{
+	margin:0 auto;
+	display:block;
+	width:1000px;
+	height:256px;
+	margin-top:-260px;
+	}
 
 .crank_welcome{
 	display:none;
 	background:url(../Assets/txtWelcome.png) no-repeat;
 	width:508px;
 	height:76px;
+	margin:0 auto;
+}
+
+.crank_number{
+	display:none;
+	background:url(../Assets/txtNumber.png) no-repeat;
+	width:630px;
+	height:32px;
 	margin:0 auto;
 }
 
@@ -54,3 +87,130 @@
 	margin:0 auto;
 	margin-top:90px;
 }
+
+.crank_clear{
+	clear:both;
+}
+
+
+.crank_txtChooseCountry{
+	display:none;
+	background:url(../Assets/txtChooseCountry.png) no-repeat;
+	width:550px;
+	height:56px;
+	margin:0 auto;
+}
+
+.crank_button_domain{
+	width:732px;
+	height:400px;
+	margin:0 auto;
+	overflow:hidden;
+	}
+	
+.crank_btnCountry{
+	cursor:pointer;
+	display:none;
+	background:url(../Assets/btnCountry.png) no-repeat;
+	width:196px;
+	height:72px;
+	float:left;
+	margin:0 auto;
+	color:#86a8a8;
+	font-size:27px;
+	font-family:Helvetica, sans-serif;
+	}
+	
+.crank_btnVerify{
+	cursor:pointer;
+	display:none;
+	background:url(../Assets/btnVerify.png) no-repeat;
+	width:394px;
+	height:81px;
+	margin:0 auto;
+	margin-top:18px;
+	}
+	
+.crank_btnProceed{
+	cursor:pointer;
+	display:none;
+	background:url(../Assets/btnProceed.png) no-repeat;
+	width:394px;
+	height:81px;
+	margin:0 auto;
+	margin-top:18px;
+}
+	
+.crank_txtFieldSet{
+	display:none;
+	background:url(../Assets/txtFieldSet.png) no-repeat;
+	width:390px;
+	height:71px;
+	margin:0 auto;
+	color:#86a8a8;
+	font-size:27px;
+	font-family:Helvetica, sans-serif;
+	}
+	
+.crank_txtFieldSet_title{
+	color:#86a8a8;
+	font-size:14px;
+	margin-left:45px;
+	margin-top:4px;
+	cursor:default;
+	font-family:Helvetica, sans-serif;
+}
+
+.crank_txtFieldSet_title_sub{
+	color:#fff;
+	font-size:34px;
+	margin-left:8px;
+	margin-top:4px;
+	cursor:default;
+	text-align:right;
+	font-family:Helvetica, sans-serif;
+}
+
+.crank_txtFieldSet_text{
+	color:#567f83;
+	font-size:39px;
+	margin-left:30px;
+	margin-top:12px;
+	float:left;
+	cursor:default;
+	font-family:Helvetica, sans-serif;
+}
+
+input{
+	background:none;
+	color:#567f83;
+	width:230px;
+	height:71px;
+	border:0;
+	font-family:Helvetica, sans-serif;
+	font-size:39px;
+	margin-left:30px;
+	}
+	
+.crank_text_spacing{
+	margin-left:30px;
+	margin-top:20px;
+	}
+
+.crank_check{
+	background:url(../Assets/txtCheck.png) no-repeat;
+	width:36px;
+	height:34px;
+	display:block;
+	margin-left:40px;
+	margin-top:10px;
+	}
+	
+.crank_password{
+	background:url(../Assets/btnPassword.png) no-repeat;
+	width:36px;
+	height:34px;
+	display:block;
+	margin-left:40px;
+	margin-top:2px;
+	}
