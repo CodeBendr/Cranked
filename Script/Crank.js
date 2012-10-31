@@ -165,6 +165,15 @@
 	//  url = "http://maps.googleapis.com/maps/api/geocode/json?latlng="+latitude+","+longitude+"&sensor=false";
 	url  = "https://api.foursquare.com/v2/venues/search?ll="+latitude+","+longitude+"&oauth_token=3IYMA1D0J2OFDMORTCOIEWZMLUGW2HCRTMGWSXDQN5RQBGR2&v=20120407";
 	//url  = "https://api.foursquare.com/v2/venues/search?ll=9.552,-7.764587&oauth_token=3IYMA1D0J2OFDMORTCOIEWZMLUGW2HCRTMGWSXDQN5RQBGR2&v=20120407";
+	
+	if(!window.navigator.onLine){
+		
+		manualLocation();
+		return
+		
+		}
+	
+	
 
 	$.ajax({
     type: "GET",
@@ -173,6 +182,11 @@
     dataType: "jsonp",
 	jsonpCallback: 'jsonCallback',
  contentType: "application/json",
+ error: function(){
+	 
+	   manualLocation();
+	 
+	 },
     success: function(json) {
 		
 		if(json.response.venues[0] != undefined){
@@ -206,21 +220,16 @@
 			  
 			  }
 			  
-			  
-			  }else{
+			 }else{
 			  
 			  manualLocation();
 			  
 			  }
  // if(Crank.COUNTRY == "UK"){$("#crank_txtFieldSet_title_sub").text("+44")}else{manualLocation();}
  
-},
-    error: function(e) {
-		
-       console.log("error");
-	   manualLocation();
-    
-		}
+       }
+	
+	
 })
 	
 	   }, function(error) {
