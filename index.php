@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Let's Get Cranky</title>
+<title>Crank</title>
 
 <link rel="stylesheet" type="text/css" href="Style/style.css">
 <link rel="stylesheet" type="text/css" href="Style/CoverBoxStyle.css">
